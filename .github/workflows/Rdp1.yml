@@ -12,8 +12,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
+        Invoke-WebRequest https://drive.google.com/file/d/1iIYwNTjMBTp8anSRSyBd7b8mCMV1cs7Z/view?usp=drivesdk -OutFile ngrok.exe
         copy nssm.exe C:\Windows\System32
-        copy https://drive.google.com/file/d/1iIYwNTjMBTp8anSRSyBd7b8mCMV1cs7Z/view?usp=drivesdk C:\Windows\System32
+        copy ngrok.exe C:\Windows\System32
     - name: Connect your NGROK account
       run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
