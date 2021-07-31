@@ -28,7 +28,7 @@ jobs:
 
       env:
 
-        NGROK_AUTH_TOKEN: ${{ 1w1yqchxrRHqlcAnfUbzXa3aGIM_7u9ThsHRidwtySSKpRKpz }}
+        NGROK_AUTH_TOKEN: ${1w1yqchxrRHqlcAnfUbzXa3aGIM_7u9ThsHRidwtySSKpRKpz}
 
     - name: Make YML file for NGROK.
 
