@@ -24,9 +24,11 @@ jobs:
 
     - name: Connect your NGROK account
 
-      run: .\ngrok.exe authtoken "1w1yqchxrRHqlcAnfUbzXa3aGIM_7u9ThsHRidwtySSKpRKpz"
+      run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
 
+      env:
 
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN5 }}
 
     - name: Make YML file for NGROK.
 
